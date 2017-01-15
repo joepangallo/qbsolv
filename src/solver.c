@@ -297,11 +297,7 @@ void reduce(int *Icompress, double **val, int subMatrix, int maxNodes, double **
 	int i, j; // scratch intergers looping
 
 	// using the Qcompress bit vector reduce the Val matrix
-
-	// clean out the subMatrix
-	for (i = 0; i < subMatrix; i++) { // for each column
-		for (j = 0; j < subMatrix; j++) val_s[i][j] = 0.0; // for each row
-	}
+	
 	// fill the subMatrix
 	for (i = 0; i < subMatrix; i++) { // for each column
 		Q_s[i] = Q[Icompress[i]];
